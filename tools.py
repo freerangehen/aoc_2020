@@ -9,7 +9,14 @@ def read_ints_from_file(filename: str) -> List[int]:
     ]
     return ints
 
+
 def read_lines_from_file(filename: str) -> List[str]:
     with open(filename, "r") as f:
         lines = f.readlines()
     return lines
+
+
+def read_text_from_file(filename: str) -> str:
+    lines = read_lines_from_file(filename)
+    return "".join(lines)
+
